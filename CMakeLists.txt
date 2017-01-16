@@ -13,7 +13,11 @@ set(ggj2017_VERSION_MINOR 0)
 include_directories("${PROJECT_BINARY_DIR}")
 
 set(EXECUTABLE_NAME "ggj2017")
-add_executable(${EXECUTABLE_NAME} src/main.cpp)
+add_executable(${EXECUTABLE_NAME} 
+	src/main.cpp
+	src/Game.cpp
+	src/Configuration.cpp
+	)
 
 include_directories("${PROJECT_SOURCE_DIR}/lib")
 

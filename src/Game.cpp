@@ -1,8 +1,13 @@
 #include "Game.h"
 
+#include <SFML/Graphics.hpp>
 
-Game::Game(Configuration conf) {
-	window = sf::RenderWindow();
+
+Game::Game(Configuration conf) :
+	window(sf::VideoMode(1200, 1000), "Hola"),
+	sceneManager(conf.startScene)
+{
+	sceneManager.loadSceneData();
 }
 
 

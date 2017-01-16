@@ -3,6 +3,7 @@
 
 #include "Configuration.h"
 
+#include <SFML/Graphics.hpp>
 
 class Game {
 public:	

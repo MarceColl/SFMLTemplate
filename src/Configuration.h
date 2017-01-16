@@ -2,13 +2,15 @@
 #define _CONFIGURATION_
 
 
+#include <string>
+
+
 class Configuration {
 public:
 	Configuration();
 
 	Configuration(std::string filename);
 
-private:
 	std::string startScene;
 	bool devTools;
 	bool vsync;
