@@ -3,17 +3,23 @@
 
 #include "Configuration.h"
 
-#include <lua/sol.hpp>
-
 
 class Game {
 public:	
 	Game(Configuration conf);
 
+	void run();
+
 private:
 	Configuration conf;
 
 	sf::RenderWindow window;
+
+	void render();
+
+	void update(float deltaTime);
+
+	void events();
 };
 
 
