@@ -1,6 +1,0 @@
-/home/mcoll/Projects/SFMLTemplate/build/CMakeFiles/rebuild_cache.dir
-/home/mcoll/Projects/SFMLTemplate/build/CMakeFiles/edit_cache.dir
-/home/mcoll/Projects/SFMLTemplate/build/CMakeFiles/ggj2017.dir
-/home/mcoll/Projects/SFMLTemplate/build/lib/imgui/CMakeFiles/rebuild_cache.dir
-/home/mcoll/Projects/SFMLTemplate/build/lib/imgui/CMakeFiles/edit_cache.dir
-/home/mcoll/Projects/SFMLTemplate/build/lib/imgui/CMakeFiles/imgui.dir
