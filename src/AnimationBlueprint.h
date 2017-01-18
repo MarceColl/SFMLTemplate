@@ -12,12 +12,9 @@ public:
 	// Create a new blueprint from a Lua script path
 	AnimationBlueprint(std::filesystem::path lua_path);
 
-	// Get the Blueprint's name
-	std::string name();
 
 private:
 	Animation bp_animation;
-	std::string name;
 };
 
 

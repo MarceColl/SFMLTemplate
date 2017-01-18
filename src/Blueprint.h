@@ -10,8 +10,11 @@ public:
 
 	~Blueprint();
 
+	// Get the Blueprint's name
+	std::string name();
+
 protected:
-						
+	std::string bp_name;
 };
 
 
