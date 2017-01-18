@@ -4,10 +4,8 @@
 
 
 Game::Game(Configuration conf) :
-	window(sf::VideoMode(1200, 1000), "Hola"),
-	sceneManager(conf.startScene)
+	window(sf::VideoMode(1200, 1000), "Hola")
 {
-	sceneManager.loadSceneData();
 }
 
 
