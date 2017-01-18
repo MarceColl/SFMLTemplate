@@ -17,6 +17,9 @@ add_executable(${EXECUTABLE_NAME}
 	src/main.cpp
 	src/Game.cpp
 	src/Configuration.cpp
+	src/AnimationSystem.cpp
+	src/EntityManager.cpp
+	src/System.cpp
 	)
 
 include_directories("${PROJECT_SOURCE_DIR}/lib")
