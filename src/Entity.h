@@ -2,12 +2,20 @@
 #define _ENTITY_
 
 
-enum class EntityID : size_t {};
+enum class EntityID : uint32_t {};
 
+class EntityManager;
+class Entity final {
+	friend class EntityManager;
 
-class Entity {
-public:
+private:
 	Entity();
+
+public:
+	~Entity();
+
+	// Get the entity ID
+	EntityID id() const { return id };
 
 private:
 	EntityID id;
