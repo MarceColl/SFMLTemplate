@@ -1,15 +1,14 @@
 #ifndef _SCENEBLUEPRINT_
 #define _SCENEBLUEPRINT_
 
-#include <lua/sol.hpp>
+#include "Blueprint.h"
+#include "Scene.h"
 
-class SceneBlueprint {
+class SceneBlueprint : public  Blueprint{
 public:
-	SceneBlueprint(std::string name);
-	SceneBlueprint();
+	SceneBlueprint(std::filesystem::path lua_path);
 private:
-	extern const string SCENE_PATH;
-	sol::state lua;
+	Scene bp_scene;
 
 };
 

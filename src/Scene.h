@@ -9,10 +9,7 @@
 
 class Scene {
 public:
-	Scene(std::string name);
 	Scene();
-
-	void draw();
 private:
 	EntityManager entityManager;
 

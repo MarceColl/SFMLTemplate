@@ -1,12 +1,18 @@
 #include "SceneBlueprint.h"
 
-const string SCENE_PATH = "scenes/";
 
 SceneBlueprint::SceneBlueprint(){}
 
-SceneBlueprint::SceneBlueprint(std::string name){
+SceneBlueprint::SceneBlueprint(std::filesystem::path filename){
 	sol::state lua;
-	lua.script_file(SCENE_PATH + name + ".lua");
-
+	lua.script_file(filename);
+	Scene bp_scene;
+	auto bpEntityList = lua["entities"];
+	for(auto bpEntity : bpEntityList)
+	{
+		string bp_base = bpEntity["base"];
+		Entity e = bp_scene.entityManager.createFromBlueprint(bp_base);
+		e.prop = bpEntity["prop"]
+	}
 	
 }
