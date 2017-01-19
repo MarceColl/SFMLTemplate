@@ -14,7 +14,7 @@ class EntityBlueprint : public Blueprint {
 	~EntityBlueprint();
 
 private:
-    static void fillAvailableComponentsList();
+    static void fill_available_components_list();
 
     static bool string_to_ct_filled = false;
     static std::unordered_map<std::string, ComponentType> string_to_ct;

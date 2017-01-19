@@ -34,7 +34,7 @@ EntityBlueprint::EntityBlueprint(std::filesystem::path lua_path) {
 
 }
 
-EntityBlueprint::fillAvailableComponentsList() {
+EntityBlueprint::fill_available_components_list() {
     string_to_ct.emplace("TransformComponent", ComponentType::Transform);
     string_to_ct.emplace("SpriteComponent", ComponentType::Sprite);
     string_to_ct.emplace("CollisionComponent", ComponentType::CollisionComponent);
