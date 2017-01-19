@@ -23,10 +23,10 @@ void EntityManager::destroy(Entity e) {
 	// TODO: Elimina Entity d'aquest Entity Manager
 }
 
-EntityManager::FilteredIterator EntityManager::filter(std::bitset filter) {
+EntityManager::FilteredIterator EntityManager::filter(std::bitset<30> filter) const {
 	// TODO: Crear FilteredIterator amb filter i retornarlo
 }
 
-EntityManager::FilteredIterator EntityManager::filter(std::function<bool(Entity)> filter) {
+EntityManager::FilteredIterator EntityManager::filter(std::function<bool(Entity)> filter) const {
 	// TODO: Crear FilteredIterator amb filter i retornarlo
 }

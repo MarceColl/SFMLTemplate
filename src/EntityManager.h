@@ -14,6 +14,12 @@ const int MAX_ENTITIES = 5000;
 
 
 class EntityManager {
+private:
+	class FilteredIterator {
+		// TODO: Implement iterator where next is the next
+		// Entity that satisfies the filter
+	};
+
 public:
 	EntityManager();
 
@@ -33,15 +39,11 @@ public:
 	void destroy(Entity e);
 
 	// Returns an iterator over all Entites that satisfy filter. std::bitset variant.
-	FilteredIterator filter(std::bitset filter) const;
+	FilteredIterator filter(std::bitset<30> filter) const;
 
 	// Returns an iterator over all Entities that satisfy filter. std::function variant.
 	FilteredIterator filter(std::function<bool(Entity)> filter) const;
 
-	class FilteredIterator {
-		// TODO: Implement iterator where next is the next
-		// Entity that satisfies the filter
-	};
 
 private:
 	std::array<Entity, MAX_ENTITIES> entities;

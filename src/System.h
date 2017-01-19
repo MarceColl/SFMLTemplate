@@ -1,8 +1,8 @@
 #ifndef _SYSTEM_
 #define _SYSTEM_
 
-#include "Scene.h"
-
+class Entity;
+class Scene;
 class System {
 public:
 	System();
