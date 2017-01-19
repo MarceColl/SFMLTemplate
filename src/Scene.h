@@ -1,5 +1,4 @@
-#ifndef _SCENE_
-#define _SCENE_
+#pragma once
 
 class Scene {
 public:
@@ -9,5 +8,3 @@ public:
 
 	EntityManager* getEntityManager();
 };
-
-#endif

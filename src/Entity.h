@@ -1,5 +1,4 @@
-#ifndef _ENTITY_
-#define _ENTITY_
+#pragma once
 
 #include <array>
 
@@ -22,6 +21,3 @@ public:
 private:
 	EntityID eid;
 };
-
-
-#endif
