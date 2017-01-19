@@ -10,7 +10,7 @@ System::System() {}
 void System::update(Scene *scene, float deltaTime) {
 	auto entities = scene->getEntityManager()->filter([](Entity e)->bool{ return false; });
 
-	for(auto e: entities) {
+	for(auto e : entities) {
 		_update(e, deltaTime);
 	}
 }
