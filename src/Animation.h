@@ -1,6 +1,4 @@
-#ifndef _ANIMATION_
-#define _ANIMATION_
-
+#pragma once
 
 #include <SFML/Graphics.h>
 #include <filesystem>
@@ -20,6 +18,3 @@ private:
 	uint8_t speed;
 	bool loop;
 };
-
-
-#endif

@@ -1,6 +1,4 @@
-#ifndef _ENTITYBLUEPRINT_
-#define _ENTITYBLUEPRINT_
-
+#pragma once
 
 #include "Blueprint.h"
 #include "Entity.h"
@@ -15,6 +13,3 @@ private:
 	
 	std::vector<Component*> entity_components;
 };
-
-
-#endif

@@ -46,4 +46,3 @@ public:
 private:
 	std::array<Entity, MAX_ENTITIES> entities;
 };
-

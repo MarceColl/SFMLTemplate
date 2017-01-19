@@ -1,5 +1,4 @@
-#ifndef _SYSTEM_
-#define _SYSTEM_
+#pragma once
 
 class Entity;
 class Scene;
@@ -12,6 +11,3 @@ public:
 protected:
 	virtual void _update(Entity e, float deltaTime);
 };
-
-
-#endif

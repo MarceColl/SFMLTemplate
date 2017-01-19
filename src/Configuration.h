@@ -1,10 +1,7 @@
-#ifndef _CONFIGURATION_
-#define _CONFIGURATION_
-
+#pragma once
 
 #include <string>
 #include <experimental/filesystem> 
-
 
 class Configuration {
 public:
@@ -16,6 +13,3 @@ public:
 	bool devTools;
 	bool vsync;
 };
-
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _ANIMATIONBLUEPRINT_
-#define _ANIMATIONBLUEPRINT_
+#pragma once
 
 #include "Blueprint.h"
 #include "Animation.h"
@@ -15,6 +14,3 @@ public:
 private:
 	Animation bp_animation;
 };
-
-
-#endif
