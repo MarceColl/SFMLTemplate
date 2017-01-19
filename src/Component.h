@@ -9,5 +9,5 @@ public:
 	~Component() {}
 
 private:
-	std::array<MAX_ENTITIES> component_data;
+	std::array<T, MAX_ENTITIES> component_data;
 };

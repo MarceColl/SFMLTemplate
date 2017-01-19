@@ -1,6 +1,4 @@
-#ifndef _ENTITYMANAGER_
-#define _ENTITYMANAGER_
-
+#pragma once
 
 #include "Entity.h"
 
@@ -49,5 +47,3 @@ private:
 	std::array<Entity, MAX_ENTITIES> entities;
 };
 
-
-#endif
