@@ -1,15 +1,16 @@
 #ifndef _SYSTEM_
 #define _SYSTEM_
 
+#include "Scene.h"
 
 class System {
 public:
 	System();
 
-	void update(float deltaTime);
+	void update(Scene *scene, float deltaTime);
 
 protected:
-	virtual void _update(float deltaTime);
+	virtual void _update(Entity e, float deltaTime);
 };
 
 
