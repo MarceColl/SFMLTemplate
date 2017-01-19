@@ -3,13 +3,14 @@
 
 
 #include <string>
+#include <filesystem> 
 
 
 class Configuration {
 public:
 	Configuration();
 
-	Configuration(std::string filename);
+	Configuration(std::filesystem::path filename);
 
 	std::string startScene;
 	bool devTools;

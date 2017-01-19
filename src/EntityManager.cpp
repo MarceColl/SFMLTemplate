@@ -4,7 +4,7 @@
 EntityManager::EntityManager() {}
 
 
-Entity EntityManager::addFromBlueprint(std::string bp_name) {
+Entity EntityManager::createFromBlueprint(std::string bp_name) {
 	// TODO: Aconseguir el blueprint, crear els components
 	// necessaris, ordenar el entitymanager per optimitzar
 }
@@ -15,10 +15,18 @@ Entity EntityManager::add(Entity e) {
 	// i insertarlos en aquesta escena
 }
 
-void EntityManager::remove(Entity e) {
+bool EntityManager::alive(Entity e) const {
+	// TODO: Check if entity is alive
+}
+
+void EntityManager::destroy(Entity e) {
 	// TODO: Elimina Entity d'aquest Entity Manager
 }
 
 EntityManager::FilteredIterator EntityManager::filter(std::bitset filter) {
+	// TODO: Crear FilteredIterator amb filter i retornarlo
+}
+
+EntityManager::FilteredIterator EntityManager::filter(std::function<bool(Entity)> filter) {
 	// TODO: Crear FilteredIterator amb filter i retornarlo
 }

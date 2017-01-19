@@ -3,6 +3,7 @@
 
 
 #include <SFML/Graphics.h>
+#include <filesystem>
 
 
 class Animation {
@@ -12,7 +13,7 @@ public:
 private:
 	std::string name;
 
-	std::string filename;
+	std::filesystem::path filename;
 	sf::Vector2i size;
 	sf::Vector2i beginning;
 	sf::Vector2i end;

@@ -6,6 +6,7 @@
 
 #include <array>
 #include <bitset>
+#include <functional>
 
 
 
@@ -20,16 +21,22 @@ public:
 	// quedar ordenada en funcio de la probablilitat que
 	// s'iterin juntes
 	// Adds an Entity from an Entity Blueprint
-	Entity addFromBlueprint(std::string bp_name);
+	Entity createFromBlueprint(std::string bp_name);
 
-	// Adds an already existing Entity
+	// Adds an already existing Entity from another EntityManager
 	Entity add(Entity e);
 
-	// Remove Entity
-	void remove(Entity e);
+	// Check if entity is alive
+	bool alive(Entity e) const;
 
-	// Returns an iterator over all Entites that satisfy filter
-	FilteredIterator filter(std::bitset filter);
+	// Remove Entity
+	void destroy(Entity e);
+
+	// Returns an iterator over all Entites that satisfy filter. std::bitset variant.
+	FilteredIterator filter(std::bitset filter) const;
+
+	// Returns an iterator over all Entities that satisfy filter. std::function variant.
+	FilteredIterator filter(std::function<bool(Entity)> filter) const;
 
 	class FilteredIterator {
 		// TODO: Implement iterator where next is the next
