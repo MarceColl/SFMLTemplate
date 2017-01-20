@@ -1,6 +1,6 @@
 #include "SpriteComponent.h"
 
-SpriteComponentData::SpriteComponentData(sol::table const& blueprint_data) : TransformComponentData(blueprint_data, sol::table()) {
+SpriteComponentData::SpriteComponentData(sol::table const& blueprint_data) : SpriteComponentData(blueprint_data, sol::table()) {
 }
 
 SpriteComponentData::SpriteComponentData(sol::table const& blueprint_data, sol::table const& scene_data) {
