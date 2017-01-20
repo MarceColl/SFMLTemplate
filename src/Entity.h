@@ -2,12 +2,14 @@
 
 #include <array>
 
+extern const int MAX_ENTITIES;
+
 enum class EntityID : int {};
 
 class EntityManager;
 class Entity final {
 	friend class EntityManager;
-	friend class std::array<Entity, 5000>;
+	friend class std::array<Entity, MAX_ENTITIES>;
 
 private:
 	Entity();
@@ -20,4 +22,6 @@ public:
 
 private:
 	EntityID eid;
+
+	static EntityManager* em;
 };
