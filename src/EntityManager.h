@@ -1,15 +1,13 @@
 #pragma once
 
 #include "Entity.h"
+#include "Globals.h"
 
 #include <array>
 #include <bitset>
 #include <functional>
 #include <lua/sol.hpp>
 
-
-
-const int MAX_ENTITIES = 5000;
 
 
 class EntityManager {
@@ -48,5 +46,7 @@ public:
 
 
 private:
-	std::array<Entity, MAX_ENTITIES> entities;
+
+	std::array<Entity, Globals::MAX_ENTITIES> entities;
 };
+

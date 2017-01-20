@@ -14,7 +14,7 @@ Entity EntityManager::createFromBlueprint(std::filesystem::path lua_path) {
 
 Entity EntityManager::createFromBlueprint(std::filesystem::path lua_path, sol::table const& bp_data) {
 	EntityBlueprint bp = new EntityBlueprint(lua_path);
-
+	
 }
 
 Entity EntityManager::add(Entity e) {

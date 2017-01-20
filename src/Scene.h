@@ -5,6 +5,7 @@
 #include "SceneBlueprint.h"
 
 #include <string>
+class EntityManager;
 
 class Scene {
 public:

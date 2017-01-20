@@ -1,13 +1,14 @@
 #pragma once
 
 #include <array>
+#include "Globals.h"
 
 enum class EntityID : int {};
 
 class EntityManager;
 class Entity final {
 	friend class EntityManager;
-	friend class std::array<Entity, 5000>;
+	friend class std::array<Entity, Globals::MAX_ENTITIES>;
 
 private:
 	Entity();
@@ -20,4 +21,6 @@ public:
 
 private:
 	EntityID eid;
+
+	static EntityManager* em;
 };

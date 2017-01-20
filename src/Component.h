@@ -1,13 +1,16 @@
 #pragma once
 
-extern const int MAX_ENTITIES;
+#icnlude "Globals.h"
 
-template<struct T>
+#include <array>
+
+
+template<class T>
 class Component {
 public:
 	Component() {}	
 	~Component() {}
 
 private:
-	std::array<MAX_ENTITIES> component_data;
+	std::array<T, Globals::MAX_ENTITIES> component_data;
 };

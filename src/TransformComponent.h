@@ -1,12 +1,19 @@
 #pragma once
 
 #include "Component.h"
+#include <lua/sol.hpp>
 
+class TransformComponentData {
+public:
+	TransformComponentData(sol::table const& blueprint_data); 
+	TransformComponentData(sol::table const& blueprint_data, sol::table const& scene_data);
 
-struct TransformComponentData {
 	sf::Vector2f position;
 	sf::Vector2f scale;
 	float rotation;
+
+private:
+	void set_transform_values(sol::table const& data);
 };
 
 

@@ -2,7 +2,7 @@
 
 
 AnimationSystem::AnimationSystem () :
-	System() {}
+	LogicSystem() {}
 
 
 void AnimationSystem::_update(Entity e, float deltaTime) {

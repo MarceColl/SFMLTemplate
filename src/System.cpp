@@ -4,14 +4,39 @@
 #include "Scene.h"
 
 
-System::System() {}
+LogicSystem::LogicSystem() {}
 
 
-void System::update(Scene *scene, float deltaTime) {
+void LogicSystem::update(Scene *scene, float deltaTime) {
 	auto entities = scene->getEntityManager()->filter([](Entity e)->bool{ return false; });
 
-	for(auto e: entities) {
+	for(auto e : entities) {
 		_update(e, deltaTime);
 	}
 }
 
+
+
+RenderSystem::RenderSystem() {}
+
+
+void RenderSystem::render(Scene *scene) {
+	auto entities = scene->getEntityManager()->filter([](Entity e)->bool{ return false; });
+
+	for(auto e : entities) {
+		_render(e);
+	}
+}
+
+
+
+InputSystem::InputSystem() {}
+
+
+void InputSystem::update(Scene *scene) {
+	auto entities = scene->getEntityManager()->filter([](Entity e)->bool{ return false; });
+
+	for(auto e : entities) {
+		_update(e);
+	}
+}

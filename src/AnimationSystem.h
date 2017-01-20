@@ -3,7 +3,7 @@
 #include "System.h"
 #include "Entity.h"
 
-class AnimationSystem : public System {
+class AnimationSystem : public LogicSystem {
 	AnimationSystem();
 
 protected:
