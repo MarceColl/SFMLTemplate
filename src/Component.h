@@ -1,8 +1,10 @@
 #pragma once
 
+#include <array>
+
 extern const int MAX_ENTITIES;
 
-template<struct T>
+template<class T>
 class Component {
 public:
 	Component() {}	

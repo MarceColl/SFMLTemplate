@@ -5,7 +5,7 @@ class TransformComponentData;
 class SpriteComponentData;
 class CollisionComponentData;
 
-EntityBlueprint::EntityBlueprint(std::filesystem::path lua_path) {
+EntityBlueprint::EntityBlueprint(std::filesystem::path lua_path) : Blueprint(lua_path) {
     //
     if (!string_to_ct_filled) {
         fillAvailableComponentsList();
