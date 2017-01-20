@@ -6,7 +6,7 @@
 Configuration::Configuration() {}
 
 
-Configuration::Configuration(std::filesystem::path filename) {
+Configuration::Configuration(std::experimental::filesystem::path filename) {
 	sol::state lua;	
 	lua.script_file(filename);
 

@@ -1,5 +1,4 @@
-#ifndef _ANIMATIONBLUEPRINT_
-#define _ANIMATIONBLUEPRINT_
+#pragma once
 
 #include "Blueprint.h"
 #include "Animation.h"
@@ -12,10 +11,6 @@ public:
 	// Create a new blueprint from a Lua script path
 	AnimationBlueprint(std::filesystem::path lua_path);
 
-
 private:
 	Animation bp_animation;
 };
-
-
-#endif

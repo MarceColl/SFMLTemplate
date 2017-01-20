@@ -1,5 +1,4 @@
-#ifndef _GAME_
-#define _GAME_
+#pragma once
 
 #include "Configuration.h"
 
@@ -22,6 +21,3 @@ private:
 
 	void events();
 };
-
-
-#endif

@@ -1,12 +1,11 @@
-#ifndef _ENTITYMANAGER_
-#define _ENTITYMANAGER_
-
+#pragma once
 
 #include "Entity.h"
 
 #include <array>
 #include <bitset>
 #include <functional>
+#include <lua/sol.hpp>
 
 
 
@@ -14,14 +13,23 @@ const int MAX_ENTITIES = 5000;
 
 
 class EntityManager {
+private:
+	class FilteredIterator {
+		// TODO: Implement iterator where next is the next
+		// Entity that satisfies the filter
+	};
+
 public:
 	EntityManager();
+	//Copy
+	EntityManager(EntityManager em);
 
 	// Idealment despres de fer els adds hauria de
 	// quedar ordenada en funcio de la probablilitat que
 	// s'iterin juntes
 	// Adds an Entity from an Entity Blueprint
 	Entity createFromBlueprint(std::string bp_name);
+	Entity createFromBlueprint(std::string bp_name, sol::table const& bp_data);
 
 	// Adds an already existing Entity from another EntityManager
 	Entity add(Entity e);
@@ -33,19 +41,12 @@ public:
 	void destroy(Entity e);
 
 	// Returns an iterator over all Entites that satisfy filter. std::bitset variant.
-	FilteredIterator filter(std::bitset filter) const;
+	FilteredIterator filter(std::bitset<30> filter) const;
 
 	// Returns an iterator over all Entities that satisfy filter. std::function variant.
 	FilteredIterator filter(std::function<bool(Entity)> filter) const;
 
-	class FilteredIterator {
-		// TODO: Implement iterator where next is the next
-		// Entity that satisfies the filter
-	};
 
 private:
 	std::array<Entity, MAX_ENTITIES> entities;
 };
-
-
-#endif

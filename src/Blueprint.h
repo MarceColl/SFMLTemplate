@@ -1,5 +1,4 @@
-#ifndef _BLUEPRINT_
-#define _BLUEPRINT_
+#pragma once
 
 #include <filesystem>
 
@@ -16,6 +15,3 @@ public:
 protected:
 	std::string bp_name;
 };
-
-
-#endif

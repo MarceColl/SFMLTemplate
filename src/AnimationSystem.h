@@ -1,6 +1,7 @@
+#pragma once
+
 #include "System.h"
 #include "Entity.h"
-
 
 class AnimationSystem : public System {
 	AnimationSystem();

@@ -1,10 +1,17 @@
 #include "System.h"
+#include "EntityManager.h"
+#include "Entity.h"
+#include "Scene.h"
 
 
-System::System();
+System::System() {}
 
 
-void System::update(float deltaTime) {
-	// TODO iterate over all entites that have the system signature	
-	// and call _update on them
+void System::update(Scene *scene, float deltaTime) {
+	auto entities = scene->getEntityManager()->filter([](Entity e)->bool{ return false; });
+
+	for(auto e: entities) {
+		_update(e, deltaTime);
+	}
 }
+

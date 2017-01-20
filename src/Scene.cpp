@@ -3,6 +3,11 @@
 #include "EntityManager.h"
 
 Scene::Scene(){
-	EntityManager entityManager = new EntityManager();
+	EntityManager entity_manager = new EntityManager();
+	
+}
+
+Scene::Scene(Scene s){
+	EntityManager entity_manager = new EntityManager(s.entity_manager);
 	
 }

@@ -1,5 +1,4 @@
-#ifndef _SCENE_
-#define _SCENE_
+#pragma once
 
 #include "Entity.h"
 #include "EntityManager.h"
@@ -10,12 +9,9 @@
 class Scene {
 public:
 	Scene();
-private:
-	EntityManager entityManager;
+	//Copy
+	Scene(Scene s);
+	~Scene();
 
-
-
+	EntityManager* getEntityManager();
 };
-
-#endif
-

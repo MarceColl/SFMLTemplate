@@ -1,21 +1,15 @@
-#ifndef _CONFIGURATION_
-#define _CONFIGURATION_
-
+#pragma once
 
 #include <string>
-#include <filesystem> 
-
+#include <experimental/filesystem> 
 
 class Configuration {
 public:
 	Configuration();
 
-	Configuration(std::filesystem::path filename);
+	Configuration(std::experimental::filesystem::path filename);
 
 	std::string startScene;
 	bool devTools;
 	bool vsync;
 };
-
-
-#endif
