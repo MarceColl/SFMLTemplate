@@ -17,7 +17,7 @@ void TransformComponentData::set_transform_values(sol::table const& data) {
         position = sf::Vector2f((*lua_position)[1], (*lua_position)[2]);
     }
     if (lua_scale) {
-        scale = sf::Vector2f((*lua_position)[1], (*lua_position)[2]);
+        scale = sf::Vector2f((*lua_scale)[1], (*lua_scale)[2]);
     }
     if (lua_rotation) {
         rotation = *lua_rotation;
