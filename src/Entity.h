@@ -1,15 +1,14 @@
 #pragma once
 
 #include <array>
-
-extern const int MAX_ENTITIES;
+#include "Globals.h"
 
 enum class EntityID : int {};
 
 class EntityManager;
 class Entity final {
 	friend class EntityManager;
-	friend class std::array<Entity, MAX_ENTITIES>;
+	friend class std::array<Entity, Globals::MAX_ENTITIES>;
 
 private:
 	Entity();

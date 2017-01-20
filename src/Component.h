@@ -1,8 +1,9 @@
 #pragma once
 
+#icnlude "Globals.h"
+
 #include <array>
 
-extern const int MAX_ENTITIES;
 
 template<class T>
 class Component {
@@ -11,5 +12,5 @@ public:
 	~Component() {}
 
 private:
-	std::array<T, MAX_ENTITIES> component_data;
+	std::array<T, Globals::MAX_ENTITIES> component_data;
 };
