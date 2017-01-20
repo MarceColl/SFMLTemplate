@@ -3,7 +3,7 @@
 
 
 RenderingSystem::RenderingSystem() :
-	System()
+	RenderSystem()
 {}
 
 

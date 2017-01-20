@@ -3,7 +3,7 @@
 #include "System.h"
 
 class Entity;
-class RenderingSystem : public System {
+class RenderingSystem : public RenderSystem {
 public:
 	RenderingSystem();
 
